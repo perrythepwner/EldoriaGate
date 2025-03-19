@@ -14,7 +14,7 @@ Difficulty: <font color=orange>Medium</font>
 ---
 
 # TLDR
-EVM challenge about solidity type checking / overflow checks bypass via yul assembly operations. Passing exactly 255 as `msg.value` and a valid passphrase to authenticate, we become authenticated users but the roles bitmask overflows to cause UB.
+EVM challenge about solidity type checking / overflow checks bypass via yul assembly operations. Passing exactly 255 as `msg.value` and a valid passphrase to authenticate, we become authenticated users and the roles bitmask wiill overflow causing UB.
 
 # Description
 > [...]
