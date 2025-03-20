@@ -17,7 +17,9 @@ Difficulty: <font color=orange>Medium</font>
 EVM challenge about solidity type checking / overflow checks bypass via yul assembly operations. Passing exactly 255 as `msg.value` and a valid passphrase to authenticate, we become authenticated users and the roles bitmask wiill overflow causing UB.
 
 # Description
-> [...]
+> At long last, you stand before the EldoriaGate, the legendary portal, the culmination of your perilous journey. Your escape from this digital realm hinges upon passing this final, insurmountable barrier. Your fate rests upon the passage through these mythic gates.  
+These are no mere gates of stone and steel. They are a living enchantment, a sentinel woven from ancient magic, judging all who dare approach. The Gate sees you, divining your worth, assigning your place within Eldoria's unyielding order. But you seek not a place within their order, but freedom beyond it. Become the Usurper. Defy the Gate's ancient magic. Pass through, yet leave no trace, no mark of your passing, no echo of your presence. Become the unseen, the unwritten, the legend whispered but never confirmed.  
+Outwit the Gate. Become a phantom, a myth. Your escape, your destiny, awaits. 
 
 # Skills Required
 - Basic understanding of Solidity and smart contracts
@@ -28,7 +30,7 @@ EVM challenge about solidity type checking / overflow checks bypass via yul asse
 - Bypassing solidty type checker / overflow checks 
 
 # Challenge Scenario
-We’re given two smart contracts, `EldoriaGate.sol` and `EldoriaGateKernel.sol`:
+We're given two smart contracts, `EldoriaGate.sol` and `EldoriaGateKernel.sol`:
 - `EldoriaGate.sol`: Deploys the kernel contract in its constructor and provides a public `enter()` function. A correct passphrase plus a suitable `msg.value` will authenticate the caller via the kernel with given roles. **Acts as the "frontend" for the `EldoriaGateKernel.sol`**.
 - `EldoriaGateKernel.sol`: Manages internal logic for authentication (`authenticate()`) and identity evaluation (`evaluateIdentity()`) using low level yul assembly. **Effectively acts as the optimized "backend" for `EldoriaGate.sol`**.
 
